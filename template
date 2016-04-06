@@ -1,0 +1,14 @@
+::section config
+	name: NAME HERE
+	shape: wall
+	max-height: 3
+	update-gamerules: true
+	include-success: false
+	section-line-break: false
+
+::section before
+
+::section after
+	/tellraw @a [{"text":"The NAME HERE module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"http://pastebin.com/u/Sobsz"}}]
+
+::section main
