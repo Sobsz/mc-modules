@@ -9,6 +9,6 @@
 ::section before
 
 ::section after
-	/tellraw @a [{"text":"The NAME HERE module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"http://pastebin.com/u/Sobsz"}}]
+	/tellraw @a [{"text":"The NAME HERE module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://github.com/Sobsz/mc-modules/"}}]
 
 ::section main
