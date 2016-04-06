@@ -1,0 +1,18 @@
+::section config
+	name: Hitler
+	shape: wall
+	max-height: 3
+	update-gamerules: true
+	include-success: false
+	section-line-break: false
+
+::section before
+
+::section after
+	/tellraw @a [{"text":"The Hitler module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://github.com/Sobsz/mc-modules/"}}]
+
+::section main
+	:R: execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ skull -1 summon Item ~ ~1 ~ {Item:{id:"minecraft:spawn_egg",tag:{EntityTag:{id:"Villager"},display:{Name:"Hitler"}}}}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ skull -1 summon LightningBolt ~ ~ ~
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ skull -1 setblock ~ ~1 ~ air
+	execute @e[type=Villager,name=Hitler] ~ ~ ~ effect @a[r=10] minecraft:poison 8 1
