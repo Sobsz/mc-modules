@@ -1,0 +1,24 @@
+::section config
+	name: Crafter Base
+	shape: wall
+	max-height: 3
+	update-gamerules: true
+	include-success: false
+	section-line-break: false
+
+::section before
+
+::section after
+	/tellraw @a [{"text":"The Crafter Base module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"http://pastebin.com/u/Sobsz"}}]
+
+::section main
+	:R: testfor @e[type=ArmorStand,tag=!SCB_Checked]
+	:C: execute @e[type=ArmorStand,tag=!SCB_Checked] ~ ~ ~ detect ~ ~-1 ~ crafting_table -1 scoreboard players tag @e[c=1] add SCB_CrafterMkn
+	execute @e[type=ArmorStand,tag=SCB_CrafterMkn] ~ ~ ~ playsound minecraft:entity.firework.large_blast block @p ~ ~ ~ 0 1.2
+	entitydata @e[type=ArmorStand,tag=SCB_CrafterMkn] {Small:1,CustomName:"Crafter",CustomNameVisible:1,NoGravity:1,Invisible:1,Marker:1}
+	:C: tp @e[type=ArmorStand,tag=SCB_CrafterMkn] ~ ~-1 ~
+	scoreboard players tag @e[type=ArmorStand,tag=SCB_CrafterMkn] add SCB_Crafter
+	scoreboard players tag @e[type=ArmorStand,tag=SCB_CrafterMkn] remove SCB_CrafterMkn
+	scoreboard players tag @e[type=ArmorStand,tag=!SCB_Checked] add SCB_Checked
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ particle smoke ~ ~ ~ 0.5 0.5 0.5 0 10
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~ ~ air -1 kill @e[c=1]
