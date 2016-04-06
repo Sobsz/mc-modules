@@ -1,0 +1,20 @@
+::section config
+	name: The Stick of Truth
+	shape: wall
+	max-height: 3
+	update-gamerules: true
+	include-success: false
+	section-line-break: false
+
+::section before
+
+::section after
+	tellraw @a [{"text":"The Stick of Truth module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"http://pastebin.com/u/Sobsz"}}]
+	give @p minecraft:stick 1 0 {AttributeModifiers:[{AttributeName:"generic.attackDamage",Name:"generic.attackDamage",Amount:100,Operation:0,UUIDLeast:895585,UUIDMost:56346},{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:100,Operation:0,UUIDLeast:720736,UUIDMost:917252},{AttributeName:"generic.luck",Name:"generic.luck",Amount:100,Operation:0,UUIDLeast:352556,UUIDMost:653701}],display:{Name:"The Stick of Truth"}}
+
+::section main
+	:R: scoreboard players tag @a remove STSOT_Holding
+	scoreboard players tag @a add STSOT_Holding {SelectedItem:{id:"stick",display:{Name:"The Stick of Truth"}}
+	execute @a[tag=STSOT_Holding,tag=!STSOT_Excluded] ~ ~ ~ particle magicCrit ~ ~ ~ 1 1 1 1 10
+	gamemode 1 @a[tag=STSOT_Holding,tag=!STSOT_Excluded,m=!1]
+	gamemode 0 @a[tag=STSOT_Holding,tag=!STSOT_Excluded,m=1]
