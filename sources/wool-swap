@@ -1,0 +1,54 @@
+::section config
+	name: Wool Swap
+	shape: wall
+	max-height: 3
+	update-gamerules: true
+	include-success: false
+	section-line-break: false
+
+::section before
+
+::section after
+	/tellraw @a [{"text":"The Wool Swap module has been successfully installed. ","color":"dark_green","bold":true},{"text":"Check out more!","color":"dark_blue","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://github.com/Sobsz/mc-modules/"}}]
+
+::section main
+	# Forwards conversion
+	:R: execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 0 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:1,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 1 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:2,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 2 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:3,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 3 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:4,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 4 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:5,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 5 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:6,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 6 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:7,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 7 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:8,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 8 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:9,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 9 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:10,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 10 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:11,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 11 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:12,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 12 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:13,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 13 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:14,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 14 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:15,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool 15 summon Item ~ ~1 ~ {Item:{id:"minecraft:wool",Damage:0,Count:1},PickupDelay:0}
+	$newline
+
+	# Backwards conversion
+	:R: execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 15 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:14,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 14 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:13,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 13 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:12,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 12 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:11,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 11 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:10,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 10 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:9,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 9 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:8,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 8 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:7,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 7 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:6,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 6 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:5,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 5 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:4,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 4 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:3,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 3 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:2,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 2 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:1,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 1 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:0,Count:1},PickupDelay:0}
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool 0 summon Item ~ ~-1 ~ {Item:{id:"minecraft:wool",Damage:15,Count:1},PickupDelay:0}
+
+	# Old wool deletion
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~1 ~ wool -1 setblock ~ ~1 ~ air
+	execute @e[type=ArmorStand,tag=SCB_Crafter] ~ ~ ~ detect ~ ~-1 ~ wool -1 setblock ~ ~-1 ~ air
