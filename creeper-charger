@@ -1,0 +1,1 @@
+/execute @e[type=Creeper] ~ ~ ~ detect ~ ~-1 ~ redstone_block -1 entitydata @e[c=1] {powered:1}
