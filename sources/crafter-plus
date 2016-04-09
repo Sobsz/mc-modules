@@ -15,6 +15,7 @@
 	:R: testfor @e[type=ArmorStand,tag=!SCP_Checked]
 	:C: execute @e[type=ArmorStand,tag=!SCP_Checked] ~ ~ ~ detect ~ ~-1 ~ dropper 1 scoreboard players tag @e[c=1] add SCP_CrafterMkn
 	execute @e[type=ArmorStand,tag=SCP_CrafterMkn] ~ ~ ~ playsound minecraft:entity.firework.large_blast block @p ~ ~ ~ 1 0.8
+	execute @e[type=ArmorStand,tag=SCP_CrafterMkn] ~ ~ ~ blockdata ~ ~ ~ {CustomName:"Crafter+"}
 	entitydata @e[type=ArmorStand,tag=SCP_CrafterMkn] {Small:1,CustomName:"Crafter+",CustomNameVisible:1,NoGravity:1,Invisible:1,Marker:1}
 	:C: tp @e[type=ArmorStand,tag=SCP_CrafterMkn] ~ ~-1 ~
 	scoreboard players tag @e[type=ArmorStand,tag=SCP_CrafterMkn] add SCP_Crafter
