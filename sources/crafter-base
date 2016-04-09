@@ -14,7 +14,7 @@
 ::section main
 	:R: testfor @e[type=ArmorStand,tag=!SCB_Checked]
 	:C: execute @e[type=ArmorStand,tag=!SCB_Checked] ~ ~ ~ detect ~ ~-1 ~ crafting_table -1 scoreboard players tag @e[c=1] add SCB_CrafterMkn
-	execute @e[type=ArmorStand,tag=SCB_CrafterMkn] ~ ~ ~ playsound minecraft:entity.firework.large_blast block @p ~ ~ ~ 0 1.2
+	execute @e[type=ArmorStand,tag=SCB_CrafterMkn] ~ ~ ~ playsound minecraft:entity.firework.large_blast block @p ~ ~ ~ 1 1.2
 	entitydata @e[type=ArmorStand,tag=SCB_CrafterMkn] {Small:1,CustomName:"Crafter",CustomNameVisible:1,NoGravity:1,Invisible:1,Marker:1}
 	:C: tp @e[type=ArmorStand,tag=SCB_CrafterMkn] ~ ~-1 ~
 	scoreboard players tag @e[type=ArmorStand,tag=SCB_CrafterMkn] add SCB_Crafter
